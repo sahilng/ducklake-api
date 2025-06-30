@@ -20,4 +20,15 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-`python app.py`
+#### Flask
+
+```sh
+python app.py
+```
+
+
+#### Gunicorn
+
+```sh
+gunicorn app:app --workers 4 --threads 2 --bind 0.0.0.0:8000
+```
