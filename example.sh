@@ -23,7 +23,7 @@ echo "Postgres is accepting connections."
 echo "Sleeping an extra 5 seconds to let Postgres finalize startup…"
 sleep 5
 
-# 5) Create both databases (no retry loops)
+# 5) Create catalog database (no retry loops)
 docker exec my-postgres psql -U admin -d postgres -c "CREATE DATABASE ducklake_catalog;"
 
 # 6) Make local data directory
