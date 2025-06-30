@@ -2,6 +2,15 @@
 
 ## Usage
 
+### Example only
+
+As an example only (creates local, unsecured Postgres):
+```sh
+./example.sh
+```
+
+### General
+
 Create `.env` based on `.env.example`
 
 ```sh
