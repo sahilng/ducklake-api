@@ -1,5 +1,7 @@
 # ducklake-api
 
+A simple HTTP server implementation for querying a DuckLake with DuckDB.
+
 ## Usage
 
 ### Example only
