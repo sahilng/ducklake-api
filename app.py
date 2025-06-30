@@ -26,14 +26,16 @@ if not DUCKLAKE_DATASTORE:
 def get_db():
     if "db" not in g:
         g.db = duckdb.connect()
-        g.sql(f"""
+        setup_query = f"""
             INSTALL ducklake;
             INSTALL postgres;
 
             ATTACH '{DUCKLAKE_CATALOG}' AS ducklake
                 (DATA_PATH '{DUCKLAKE_DATASTORE}');
             USE ducklake;
-        """)
+        """
+        print(setup_query)
+        g.sql(setup_query)
     return g.db
 
 @app.teardown_appcontext
