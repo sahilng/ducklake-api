@@ -2,3 +2,4 @@ flask
 duckdb
 gunicorn
 python-dotenv
+pytz

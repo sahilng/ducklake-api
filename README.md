@@ -4,14 +4,14 @@ A simple HTTP server implementation for querying a DuckLake with DuckDB
 
 ## Usage
 
-### Example only
+### Example setup
 
 As an example only (creates local, unsecured datastore and Postgres catalog):
 ```sh
 ./example.sh
 ```
 
-### General
+### General setup
 
 Create `.env` based on `.env.example`
 
@@ -22,15 +22,19 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-#### Flask
+### Flask server
 
 ```sh
 python app.py
 ```
 
 
-#### Gunicorn
+### Gunicorn server
 
 ```sh
 gunicorn app:app --workers 4 --threads 2 --bind 0.0.0.0:8000
 ```
+
+### Query
+
+`POST` to `http://localhost:8000/query` with payload: `{"sql": "your-query"}` and header: `X-API-Key` set to `your-secret-key`
