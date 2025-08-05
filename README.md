@@ -4,7 +4,7 @@ A simple HTTP server implementation for querying a DuckLake with DuckDB
 
 ## Usage
 
-### Example setup
+### Example only
 
 As an example only (creates local, unsecured datastore and Postgres catalog):
 ```sh
